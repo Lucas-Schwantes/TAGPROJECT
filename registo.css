@@ -1,0 +1,116 @@
+*{
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.section-barra-topo {
+    margin: 0;
+    padding: 0;
+    height: 6vh;
+}
+
+.barra-topo {
+    display: flex;
+    height: 6vh;
+    width: 100%;
+    background-color: #ebebeb;
+    position: fixed;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    border-bottom: black solid 1px;
+    z-index: 999;
+
+}
+
+.tag-icon {
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(121, 121, 121);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+#back, #back:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.titulo {
+    padding: 0;
+    margin-bottom: 2vh;
+    margin-top: 4vh;
+    font-weight: bolder;
+    font-size: 42px;
+}
+
+.meta {
+    font-size: 16px;
+}
+
+.conteudo {
+    width: 60%;
+    margin: 0 auto;
+}
+
+figure, img, .imgHover {
+    width: 650px;
+    height: auto;
+    margin: 0 auto;
+    padding: 2.2vh;
+}
+
+.meta {
+    margin-bottom: 3vh;
+}
+
+.local, .data {
+    border: solid black 1px;
+    border-radius: 25px;
+    padding: 5px 15px 5px 10px;
+    font-size: 14px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.local:hover, .data:hover {
+    background-color: black;
+    color: white;
+    transition: 600ms linear all;
+
+}
+
+em, .wp-block-quote {
+    font-weight: 600;
+}
+
+.wp-element-caption {
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer {
+    background-color: #ebebeb;
+    border-top: black solid 1px;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+
+.logos {
+    height: 60px;
+    width: auto;
+    margin: 0 auto;
+}

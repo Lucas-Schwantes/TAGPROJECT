@@ -1,0 +1,380 @@
+:root {
+    --art: blue;
+    --loc: red;
+    --pes: green;
+}
+
+.entry {
+    width: 300px;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: gray;
+    transition: 0.2s;
+    padding: 20px;
+}
+
+.entry:hover {
+    width: 400px;
+    color: black;
+    font-size: larger;
+    filter: none;
+
+}
+
+.entry:hover figure {
+    box-shadow: 4px 4px 8px #0000001a;
+}
+
+.entry:hover img {
+    filter: none;
+}
+
+.entry .img-wrapper::before:hover {
+    position: none;
+}
+
+* {
+    padding: 0;
+    margin: 0px;
+}
+
+.section-barra-topo {
+    height: 6vh;
+}
+
+.section-corpo {
+    height: 84vh;
+}
+
+.barra-topo {
+    display: flex;
+    height: 6vh;
+    width: 100%;
+    background-color: #ebebeb;
+    position: fixed;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    border-bottom: black solid 1px;
+    z-index: 999;
+
+}
+
+.barra-topo-filtros {}
+
+.barras-bottom {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 10vh;
+}
+
+.barra-anos {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: #ebebeb;
+    border-top: black solid 1px;
+    border-bottom: black solid 1px;
+}
+
+.separador-ano {
+    font-family: sans-serif;
+    background-color: #ebebeb;
+    padding: 10px 30px;
+    /*border: black solid 1px;*/
+    float: left;
+    /*width: 9vw;*/
+    text-align: center;
+    font-weight: 200;
+}
+
+.barra-decada {
+    font-family: sans-serif;
+    width: 100%;
+    background-color: #ebebeb;
+    bottom: 0px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.separador-decada {
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    border-right: black solid 1px;
+}
+
+.separador-decada-back {
+    padding: 10px;
+    width: 10%;
+    border-right: black solid 1px;
+}
+
+.separador-decada-next {
+    padding: 10px;
+    width: 10%;
+}
+
+.separador-ativo{
+    background-color: black;
+    color: white;
+    transition: 2s linear all;
+    font-weight: bolder;
+}
+
+.indicador-ano-selecionado {
+    float: left;
+    background-color: #ffffff;
+    mix-blend-mode: difference;
+    width: 10vw;
+    height: 39px;
+    position: absolute;
+    left: 0px;
+}
+
+.separador-ano {
+    border-left: 0;
+    transition: 0.5s linear all;
+}
+
+.corpo-centro {
+    display: flex;
+    height: 84vh;
+    width: fit-content;
+    overflow-x: scroll;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.corpo-ano {
+    position: relative;
+    display: flex;
+    height: 84vh;
+    width: 100vw;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.year-header {
+    position: absolute;
+    left: -100px;
+    transform: rotateZ(270deg);
+    font-size: 200px;
+    font-family: sans-serif;
+    color: #5e5e5e26;
+    z-index: -2;
+    opacity: 30%;
+    transition-duration: 1s;
+}
+
+.imagem-corpo {
+    /*padding: 20px;*/
+}
+
+body {
+    overflow-y: hidden;
+}
+
+.material-symbols-outlined {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    font-size: 12px !important;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 20
+}
+
+
+/* BARRA SUPERIOR -- FILTROS */
+
+.button {
+    margin-right: 5px;
+    padding: 5px 20px 5px 10px;
+    text-align: left;
+    border-radius: 25px;
+    border: black solid 1px;
+    position: relative;
+    width: 150px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 13px;
+    background-color: #ebebeb;
+}
+
+#btn-pes {
+    border: var(--pes) solid 1px;
+    color: var(--pes);
+}
+
+#btn-loc {
+    border: var(--loc) solid 1px;
+    color: var(--loc);
+}
+
+#btn-art {
+    border: var(--art) solid 1px;
+    color: var(--art);
+}
+
+.tag-icon {
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+    padding: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    z-index: 9999;
+    border-radius: 10px;
+    font-family: sans-serif;
+    min-width: 150px;
+    font-size: 12px;
+    border: 1px solid black;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 0px 5px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    /*display: block;*/
+}
+
+.dropdown:hover #btn-loc {
+    background-color: var(--loc);
+    color: white;
+    animation-duration: 1s;
+}
+
+.dropdown:hover #btn-pes {
+    background-color: var(--pes);
+    color: white;
+}
+
+.dropdown:hover #btn-art {
+    background-color: var(--art);
+    color: white;
+}
+
+.imgHover {
+    width: 100%;
+    height: 100%;
+}
+
+/* CSS variables. Not needed for the effect to work. */
+:root {
+    --base: white;
+    --bg-blend: multiply;
+    --blur: 0px;
+    --fg-blend: lighten;
+    --foreground: red;
+    --opacity: 1;
+    --spacing: 1%;
+}
+
+.img-wrapper {
+    background-color: var(--base);
+    display: flex;
+    flex: 1 1 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-wrapper img {
+    filter: grayscale(100%) contrast(1) blur(var(--blur));
+    flex: 1 0 100%;
+    height: 100%;
+    max-width: 100%;
+    mix-blend-mode: var(--bg-blend);
+    opacity: var(--opacity);
+    position: relative;
+    width: 100%;
+}
+
+.img-wrapper::before {
+    background-color: var(--foreground);
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    mix-blend-mode: var(--fg-blend);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.img-wrapper-pes::before {
+    background-color: var(--pes);
+}
+
+.img-wrapper-loc::before {
+    background-color: var(--loc);
+}
+
+.img-wrapper-art::before {
+    background-color: var(--art);
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+.disabled {
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    opacity: 20%;
+    transition-duration: 500ms;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.button-disabled {}
+
+.expand-active{
+    letter-spacing: 20px;
+    transition-duration: 1s;
+
+}

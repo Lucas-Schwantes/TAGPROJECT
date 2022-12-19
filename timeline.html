@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline</title>
+    <link rel="stylesheet" href="timeline.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="timeline.js"></script>
+    
+</head>
+
+<body>
+    <!--BARRA TOPO + FILTROS-->
+    <section class="section-barra-topo">
+        <div class="barra-topo">
+           
+            <div class="tag-icon">
+                <p>TAG</p>
+            </div>
+
+            <div class="barra-topo-filtros">
+                <div class="dropdown">
+                    <button class="button" id="btn-art" onclick="filtroArt()">
+                        artefactos
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                    <!--DROPDOWN DE FILTRO (NÃO UTILIZADO)-->
+                    <div class="dropdown-content" id="itens-menu-art">
+                        <a href="#">Cartazes</a>
+                        <a href="#">Livros</a>
+                        <a href="#">Tipografia</a>
+                        <a href="#">Embalagem</a>
+                        <a href="#">Todos</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="button" id="btn-loc" onclick="filtroLoc()">
+                        locais
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                    <!--DROPDOWN DE FILTRO (NÃO UTILIZADO)-->
+                    <div class="dropdown-content" id="itens-menu-loc">
+                        <a href="#">Porto</a>
+                        <a href="#">Lisboa</a>
+                        <a href="#">Coimbra</a>
+                        <a href="#">Todos</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="button" id="btn-pes" onclick="filtroPes()">
+                        pessoas
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                    <!--DROPDOWN DE FILTRO (NÃO UTILIZADO)-->
+                    <div class="dropdown-content" id="itens-menu-pes">
+                        <a href="#">Tipógrafos</a>
+                        <a href="#">Designers</a>
+                        <a href="#">Professores</a>
+                        <a href="#">Todos</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--CORPO CENTRAL-->
+    <section class="section-corpo">
+        <div class="corpo-centro" id="corpo-centro">
+            <!--ITENS SÃO INSERIDOS AQUI-->
+        </div>
+    </section>
+
+    <!--BARRAS TIMELINE-->
+    <section class="barras-bottom">
+        <!--BARRA ANOS-->
+        <div class="barra-anos" id="barra-anos">
+            <!--INDICADOR DO ANO ATUAL ⬇︎ (deprecated)-->
+            <!--<div class="indicador-ano-selecionado" id="selected"> </div>-->
+             <!--SEPARADORES DE ANOS SÃO INSERIDOS AQUI-->
+        </div>
+
+        <!--BARRA SÉCULOS-->
+        <div class="barra-decada">
+            <div class="separador-decada-back">
+                <p><</p>
+            </div>
+            <div class="separador-decada">
+                <p id="range-anos">XXXX-XXXX</p>
+            </div>
+            <div class="separador-decada-next">
+                <p>></p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
